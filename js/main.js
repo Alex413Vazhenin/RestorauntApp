@@ -82,6 +82,9 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     scrollwheel: false
   });
   updateRestaurants();
+  google.maps.event.addListenerOnce(self.map, 'idle', () => {
+  document.getElementsByTagName('iframe')[0].title = "Google Maps";
+  });
 }
 
 /**
